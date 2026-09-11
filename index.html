@@ -69,7 +69,8 @@
     display:flex; align-items:center; justify-content:space-between;
     padding:16px 24px; max-width:var(--maxw); margin:0 auto;
   }
-  .brand{display:flex; align-items:center; text-decoration:none; color:#FFFFFF;}
+  .brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:#FFFFFF;}
+  .brand img{width:34px; height:34px; border-radius:8px; flex-shrink:0;}
   .brand .word{font-family:'Atlantico','Montserrat',sans-serif; font-weight:normal; font-size:1.15rem; letter-spacing:0.03em; text-transform:uppercase;}
   .brand .sub{font-family:'Atlantico','Montserrat',sans-serif; font-size:1.15rem; letter-spacing:0.03em; color:#FFFFFF; text-transform:uppercase; margin-left:0.35em;}
   nav{display:flex; gap:28px;}
@@ -259,6 +260,7 @@
 <header>
   <div class="headerbar">
     <a href="#top" class="brand">
+      <img src="images/logo-icon.png" alt="Gabusi Amoblamientos">
       <span class="word">Gabusi</span><span class="sub">AMOBLAMIENTOS</span>
     </a>
     <nav>
@@ -322,90 +324,6 @@
           <rect x="330" y="270" width="70" height="16" rx="8" stroke="#14213D" stroke-width="3"/>
         </svg>
       </div>
-    </div>
-  </section>
-
-  <!-- ============ CATEGORIES ============ -->
-  <section id="categorias">
-    <div class="container">
-      <div class="section-head">
-        <h2>¿Qué estás buscando?</h2>
-        <p>Elegí una categoría para ver de qué se trata. Para precio exacto, stock y color disponible, escribinos por WhatsApp — te respondemos al toque.</p>
-      </div>
-
-      <div class="cat-grid">
-
-        <div class="cat-card">
-          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="10" width="18" height="8" rx="2"/><path d="M6 10V8a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v2"/><path d="M3 14h18"/></svg></div>
-          <h3>Colchones</h3>
-          <div class="items">Espuma alta densidad, resortes, viscoelásticos, todas las medidas.</div>
-          <div class="cat-price">Desde $180.000*</div>
-          <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Quería consultar por Colchones: precio, stock y medida disponible.">Consultar</a>
-        </div>
-
-        <div class="cat-card">
-          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="5" rx="1.5"/><path d="M5 14v3M19 14v3"/><path d="M3 9l1.5-2.5h15L21 9"/></svg></div>
-          <h3>Sommiers y conjuntos</h3>
-          <div class="items">Bases reforzadas y conjunto colchón + sommier armado.</div>
-          <div class="cat-price">Desde $220.000*</div>
-          <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Quería consultar por Sommiers y conjuntos: precio, stock y medida disponible.">Consultar</a>
-        </div>
-
-        <div class="cat-card">
-          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16v4a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><path d="M5 12V9a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3"/><path d="M6 17v2M18 17v2"/></svg></div>
-          <h3>Muebles de living</h3>
-          <div class="items">Sillones, sofás, racks, mesas ratonas.</div>
-          <div class="cat-price">Desde $250.000*</div>
-          <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Quería consultar por Muebles de living: precio, stock y medida disponible.">Consultar</a>
-        </div>
-
-        <div class="cat-card">
-          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M12 3v18"/><circle cx="10" cy="12" r=".6" fill="currentColor" stroke="none"/><circle cx="14" cy="12" r=".6" fill="currentColor" stroke="none"/></svg></div>
-          <h3>Muebles de dormitorio</h3>
-          <div class="items">Roperos, cómodas, camas, mesas de luz.</div>
-          <div class="cat-price">Desde $150.000*</div>
-          <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Quería consultar por Muebles de dormitorio: precio, stock y medida disponible.">Consultar</a>
-        </div>
-
-        <div class="cat-card">
-          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="4.2"/><path d="M6 20c0-3 2.5-5 6-5s6 2 6 5"/></svg></div>
-          <h3>Muebles de comedor</h3>
-          <div class="items">Mesas, sillas, vitrinas, vajilleros.</div>
-          <div class="cat-price">Desde $180.000*</div>
-          <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Quería consultar por Muebles de comedor: precio, stock y medida disponible.">Consultar</a>
-        </div>
-
-        <div class="cat-card">
-          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M9 20h6M12 16v4"/></svg></div>
-          <h3>Electrodomésticos</h3>
-          <div class="items">TVs, heladeras, lavarropas, hornos y más.</div>
-          <div class="cat-price">Desde $90.000*</div>
-          <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Quería consultar por Electrodomésticos: precio, stock y modelo disponible.">Consultar</a>
-        </div>
-
-        <div class="cat-card">
-          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="10" rx="1.5"/><path d="M7 9V6a1 1 0 0 1 1-1h2M7 6h1"/></svg></div>
-          <h3>Muebles de cocina</h3>
-          <div class="items">Mesadas, bajo mesada y muebles a medida.</div>
-          <div class="cat-price">Desde $200.000*</div>
-          <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Quería consultar por Muebles de cocina: precio, stock y medida disponible.">Consultar</a>
-        </div>
-
-        <div class="cat-card">
-          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4 2 6 5 6 9a6 6 0 0 1-12 0c0-4 2-7 6-9Z"/><path d="M12 12v9"/></svg></div>
-          <h3>Muebles de exterior</h3>
-          <div class="items">Sillas, mesas y sets para patio y jardín.</div>
-          <div class="cat-price">Desde $60.000*</div>
-          <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Quería consultar por Muebles de exterior: precio, stock y medida disponible.">Consultar</a>
-        </div>
-
-      </div>
-
-      <div class="cat-extra">
-        También tenemos muebles de oficina, cunas, decoración y ropa de cama.
-        <a data-wa-msg="Hola! Quería consultar qué tienen disponible en Gabusi Amoblamientos.">Consultanos qué estás buscando →</a>
-      </div>
-      <p style="font-size:0.78rem; color:rgba(20,33,61,0.55); margin-top:18px;">*Precios de referencia — pueden variar según modelo y disponibilidad. Confirmamos el valor final por WhatsApp.</p>
     </div>
   </section>
 
@@ -492,6 +410,90 @@
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORIES ============ -->
+  <section id="categorias">
+    <div class="container">
+      <div class="section-head">
+        <h2>¿Qué estás buscando?</h2>
+        <p>Elegí una categoría para ver de qué se trata. Para precio exacto, stock y color disponible, escribinos por WhatsApp — te respondemos al toque.</p>
+      </div>
+
+      <div class="cat-grid">
+
+        <div class="cat-card">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="10" width="18" height="8" rx="2"/><path d="M6 10V8a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v2"/><path d="M3 14h18"/></svg></div>
+          <h3>Colchones</h3>
+          <div class="items">Espuma alta densidad, resortes, viscoelásticos, todas las medidas.</div>
+          <div class="cat-price">Desde $180.000*</div>
+          <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Quería consultar por Colchones: precio, stock y medida disponible.">Consultar</a>
+        </div>
+
+        <div class="cat-card">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="5" rx="1.5"/><path d="M5 14v3M19 14v3"/><path d="M3 9l1.5-2.5h15L21 9"/></svg></div>
+          <h3>Sommiers y conjuntos</h3>
+          <div class="items">Bases reforzadas y conjunto colchón + sommier armado.</div>
+          <div class="cat-price">Desde $220.000*</div>
+          <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Quería consultar por Sommiers y conjuntos: precio, stock y medida disponible.">Consultar</a>
+        </div>
+
+        <div class="cat-card">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16v4a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><path d="M5 12V9a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3"/><path d="M6 17v2M18 17v2"/></svg></div>
+          <h3>Muebles de living</h3>
+          <div class="items">Sillones, sofás, racks, mesas ratonas.</div>
+          <div class="cat-price">Desde $250.000*</div>
+          <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Quería consultar por Muebles de living: precio, stock y medida disponible.">Consultar</a>
+        </div>
+
+        <div class="cat-card">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M12 3v18"/><circle cx="10" cy="12" r=".6" fill="currentColor" stroke="none"/><circle cx="14" cy="12" r=".6" fill="currentColor" stroke="none"/></svg></div>
+          <h3>Muebles de dormitorio</h3>
+          <div class="items">Roperos, cómodas, camas, mesas de luz.</div>
+          <div class="cat-price">Desde $150.000*</div>
+          <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Quería consultar por Muebles de dormitorio: precio, stock y medida disponible.">Consultar</a>
+        </div>
+
+        <div class="cat-card">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="4.2"/><path d="M6 20c0-3 2.5-5 6-5s6 2 6 5"/></svg></div>
+          <h3>Muebles de comedor</h3>
+          <div class="items">Mesas, sillas, vitrinas, vajilleros.</div>
+          <div class="cat-price">Desde $180.000*</div>
+          <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Quería consultar por Muebles de comedor: precio, stock y medida disponible.">Consultar</a>
+        </div>
+
+        <div class="cat-card">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M9 20h6M12 16v4"/></svg></div>
+          <h3>Electrodomésticos</h3>
+          <div class="items">TVs, heladeras, lavarropas, hornos y más.</div>
+          <div class="cat-price">Desde $90.000*</div>
+          <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Quería consultar por Electrodomésticos: precio, stock y modelo disponible.">Consultar</a>
+        </div>
+
+        <div class="cat-card">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="10" rx="1.5"/><path d="M7 9V6a1 1 0 0 1 1-1h2M7 6h1"/></svg></div>
+          <h3>Muebles de cocina</h3>
+          <div class="items">Mesadas, bajo mesada y muebles a medida.</div>
+          <div class="cat-price">Desde $200.000*</div>
+          <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Quería consultar por Muebles de cocina: precio, stock y medida disponible.">Consultar</a>
+        </div>
+
+        <div class="cat-card">
+          <div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4 2 6 5 6 9a6 6 0 0 1-12 0c0-4 2-7 6-9Z"/><path d="M12 12v9"/></svg></div>
+          <h3>Muebles de exterior</h3>
+          <div class="items">Sillas, mesas y sets para patio y jardín.</div>
+          <div class="cat-price">Desde $60.000*</div>
+          <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Quería consultar por Muebles de exterior: precio, stock y medida disponible.">Consultar</a>
+        </div>
+
+      </div>
+
+      <div class="cat-extra">
+        También tenemos muebles de oficina, cunas, decoración y ropa de cama.
+        <a data-wa-msg="Hola! Quería consultar qué tienen disponible en Gabusi Amoblamientos.">Consultanos qué estás buscando →</a>
+      </div>
+      <p style="font-size:0.78rem; color:rgba(20,33,61,0.55); margin-top:18px;">*Precios de referencia — pueden variar según modelo y disponibilidad. Confirmamos el valor final por WhatsApp.</p>
     </div>
   </section>
 
