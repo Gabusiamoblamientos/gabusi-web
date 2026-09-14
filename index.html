@@ -77,6 +77,15 @@
   nav a{text-decoration:none; font-size:0.95rem; color:#FFFFFF; opacity:0.82;}
   nav a:hover{opacity:1; color:var(--pine-light);}
   @media (max-width:860px){ nav{display:none;} }
+  @media (max-width:540px){
+    .headerbar{padding:14px 16px; gap:10px;}
+    .brand{gap:8px;}
+    .brand img{width:28px; height:28px;}
+    .brand .word,.brand .sub{font-size:0.82rem;}
+    .brand .sub{display:none;}
+    .headerbar .btn-wa.btn-sm{padding:10px; flex-shrink:0;}
+    .headerbar .btn-wa.btn-sm .wa-label{display:none;}
+  }
 
   .btn{
     display:inline-flex; align-items:center; gap:8px;
@@ -108,6 +117,7 @@
     .hero .container{grid-template-columns:1fr;}
     .hero-art{order:-1; max-width:340px; margin:0 auto 8px;}
   }
+  .hero-art svg{width:100%; height:auto;}
   .hero h1{
     font-size:clamp(2.1rem, 4.2vw, 3.1rem); max-width:15ch; font-weight:800;
     background:linear-gradient(100deg, var(--ink) 25%, var(--pine-light) 50%, var(--ink) 75%);
@@ -272,7 +282,7 @@
     </nav>
     <a class="btn btn-wa btn-sm" data-wa-msg="Hola! Vi la web de Gabusi Amoblamientos y quería hacer una consulta.">
       <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.33 4.97L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2zm5.8 14.13c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.12.11-1.81-.11-.42-.13-.95-.31-1.64-.6-2.9-1.25-4.79-4.17-4.93-4.36-.14-.19-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.27-.29.58-.36.78-.36.19 0 .39 0 .55.01.18.01.42-.07.65.5.24.58.81 2.01.88 2.16.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.16-.19.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.53.72 1.79.85.26.13.43.19.5.3.07.11.07.62-.17 1.3z"/></svg>
-      Escribinos
+      <span class="wa-label">Escribinos</span>
     </a>
   </div>
 </header>
@@ -309,7 +319,7 @@
       </div>
 
       <div class="hero-art" aria-hidden="true">
-        <svg viewBox="0 0 420 340" fill="none">
+        <svg viewBox="0 0 420 340" width="420" height="340" fill="none">
           <path d="M60 260c0-70 30-100 100-100s100 30 100 100" stroke="#14213D" stroke-width="3" stroke-linecap="round"/>
           <rect x="40" y="255" width="240" height="45" rx="10" stroke="#14213D" stroke-width="3"/>
           <path d="M40 280H10M280 280h30" stroke="#14213D" stroke-width="3" stroke-linecap="round"/>
