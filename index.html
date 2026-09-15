@@ -219,6 +219,21 @@
   .why-item p{color:rgba(20,33,61,0.75); font-size:0.96rem;}
   .why-item .num{font-family:'Atlantico','Montserrat',sans-serif; font-size:2rem; color:var(--pine); margin-bottom:10px; display:block;}
 
+  /* ---------- Local gallery ---------- */
+  .local-gallery-head{margin-top:64px; padding-top:48px; border-top:1px solid var(--line);}
+  .local-gallery-head h3{font-size:1.3rem; font-weight:600;}
+  .local-gallery-head p{margin-top:8px; color:rgba(20,33,61,0.75); font-size:0.96rem; max-width:60ch;}
+  .local-gallery{
+    display:grid; grid-template-columns:repeat(auto-fill, minmax(170px, 1fr)); gap:14px;
+    margin-top:24px;
+  }
+  .local-gallery a{
+    display:block; aspect-ratio:1/1; border-radius:var(--radius); overflow:hidden;
+    border:1px solid var(--line); background:var(--paper);
+  }
+  .local-gallery img{width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.4s ease;}
+  .local-gallery a:hover img{transform:scale(1.06);}
+
   /* ---------- FAQ ---------- */
   .faq{max-width:760px;}
   details{
@@ -735,6 +750,25 @@
           <h3>Financiación pensada para vos</h3>
           <p>Efectivo con descuento, cuotas sin interés o crédito personal: elegís cómo pagarlo.</p>
         </div>
+      </div>
+
+      <div class="local-gallery-head">
+        <h3>Así es nuestro local</h3>
+        <p>Nos vas a encontrar en Altamira 1625, Rafael Calzada. Mirá algunas fotos del salón y elegí tranquilo — o coordiná tu visita por WhatsApp.</p>
+      </div>
+      <div class="local-gallery">
+        <a href="images/local-fachada.jpg" target="_blank" rel="noopener"><img src="images/local-fachada.jpg" alt="Frente del local de Gabusi Amoblamientos en Altamira 1625" loading="lazy"></a>
+        <a href="images/local-interior-1.jpg" target="_blank" rel="noopener"><img src="images/local-interior-1.jpg" alt="Salón de exhibición de Gabusi Amoblamientos" loading="lazy"></a>
+        <a href="images/local-interior-2.jpg" target="_blank" rel="noopener"><img src="images/local-interior-2.jpg" alt="Muebles de living y comedor exhibidos en el local" loading="lazy"></a>
+        <a href="images/local-interior-3.jpg" target="_blank" rel="noopener"><img src="images/local-interior-3.jpg" alt="Sector de roperos y placares en el local" loading="lazy"></a>
+        <a href="images/local-interior-4.jpg" target="_blank" rel="noopener"><img src="images/local-interior-4.jpg" alt="Sillones y muebles exhibidos en el local" loading="lazy"></a>
+        <a href="images/local-interior-5.jpg" target="_blank" rel="noopener"><img src="images/local-interior-5.jpg" alt="Muebles y electrodomésticos exhibidos en el local" loading="lazy"></a>
+        <a href="images/local-interior-6.jpg" target="_blank" rel="noopener"><img src="images/local-interior-6.jpg" alt="Sector de dormitorio exhibido en el local" loading="lazy"></a>
+        <a href="images/local-interior-7.jpg" target="_blank" rel="noopener"><img src="images/local-interior-7.jpg" alt="Muebles exhibidos en el salón de Gabusi Amoblamientos" loading="lazy"></a>
+        <a href="images/local-interior-8.jpg" target="_blank" rel="noopener"><img src="images/local-interior-8.jpg" alt="Living y comedor exhibidos en el local" loading="lazy"></a>
+        <a href="images/local-interior-9.jpg" target="_blank" rel="noopener"><img src="images/local-interior-9.jpg" alt="Sector de sillones y living del local" loading="lazy"></a>
+        <a href="images/local-interior-10.jpg" target="_blank" rel="noopener"><img src="images/local-interior-10.jpg" alt="Sector de dormitorio y placares del local" loading="lazy"></a>
+        <a href="images/local-interior-11.jpg" target="_blank" rel="noopener"><img src="images/local-interior-11.jpg" alt="Vista general del salón de Gabusi Amoblamientos" loading="lazy"></a>
       </div>
     </div>
   </section>
