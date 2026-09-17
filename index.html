@@ -258,6 +258,15 @@
   .footer-grid h3{font-size:1rem; font-weight:600; margin-bottom:14px;}
   .footer-info p{margin:0 0 10px; font-size:0.95rem; color:rgba(20,33,61,0.8);}
   .footer-info a{text-decoration:underline;}
+  .social-links{display:flex; gap:10px; margin-top:16px;}
+  .social-icon{
+    width:38px; height:38px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    background:var(--card); border:1px solid var(--line); color:var(--ink);
+    transition:transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  }
+  .social-icon svg{width:18px; height:18px;}
+  .social-icon:hover{background:var(--ink); color:#FFFFFF; transform:translateY(-2px);}
   .map-wrap{border-radius:var(--radius); overflow:hidden; border:1px solid var(--line); aspect-ratio:16/10;}
   .map-wrap iframe{width:100%; height:100%; border:0;}
   .brand-font{font-family:'Atlantico','Montserrat',sans-serif; text-transform:uppercase; letter-spacing:0.03em;}
@@ -296,7 +305,9 @@
     "addressCountry": "AR"
   },
    "sameAs": [
-    "https://www.instagram.com/gabusiamoblamientos/"
+    "https://www.instagram.com/gabusiamoblamientos/",
+    "https://www.facebook.com/gabusiamoblamientos",
+    "https://www.tiktok.com/@gabusiamoblamientos"
   ],
   "openingHoursSpecification": [
     {
@@ -919,6 +930,17 @@
           <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.33 4.97L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2zm5.8 14.13c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.12.11-1.81-.11-.42-.13-.95-.31-1.64-.6-2.9-1.25-4.79-4.17-4.93-4.36-.14-.19-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.27-.29.58-.36.78-.36.19 0 .39 0 .55.01.18.01.42-.07.65.5.24.58.81 2.01.88 2.16.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.16-.19.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.53.72 1.79.85.26.13.43.19.5.3.07.11.07.62-.17 1.3z"/></svg>
           Escribinos por WhatsApp
         </a>
+        <div class="social-links">
+          <a class="social-icon" href="https://www.instagram.com/gabusiamoblamientos/" target="_blank" rel="noopener" aria-label="Instagram de Gabusi Amoblamientos">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a class="social-icon" href="https://www.facebook.com/gabusiamoblamientos" target="_blank" rel="noopener" aria-label="Facebook de Gabusi Amoblamientos">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+          </a>
+          <a class="social-icon" href="https://www.tiktok.com/@gabusiamoblamientos" target="_blank" rel="noopener" aria-label="TikTok de Gabusi Amoblamientos">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 2c.3 2.1 1.6 3.8 3.5 4.4v3a7.6 7.6 0 0 1-3.5-1v6.4a5.9 5.9 0 1 1-5.9-5.9c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 2 2.7V2h3z"/></svg>
+          </a>
+        </div>
       </div>
       <div class="map-wrap">
         <iframe src="https://maps.google.com/maps?q=Altamira%201625%2C%20Rafael%20Calzada%2C%20Buenos%20Aires&t=&z=15&ie=UTF8&output=embed" loading="lazy" title="Ubicación de Gabusi Amoblamientos"></iframe>
