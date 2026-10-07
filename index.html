@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es-AR">
 <head>
+<meta charset="UTF-8">
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9PKV5J34Z"></script>
 <script>
@@ -10,13 +11,22 @@
 
   gtag('config', 'G-D9PKV5J34Z');
 </script>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gabusi Amoblamientos — Muebles, colchones y sommiers en Rafael Calzada</title>
 <meta name="description" content="Mueblería familiar en Rafael Calzada. Colchones, sommiers, muebles de living, dormitorio, comedor, electrodomésticos y más. Envío sin cargo según zona, cuotas sin interés y descuento en efectivo y transferencia. Consultá por WhatsApp.">
 <meta property="og:title" content="Gabusi Amoblamientos">
 <meta property="og:description" content="Muebles, colchones y sommiers en Rafael Calzada. Envío sin cargo según zona, cuotas sin interés y descuento en efectivo y transferencia. Consultá por WhatsApp.">
+<link rel="canonical" href="https://gabusiamoblamientos.com.ar/">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://gabusiamoblamientos.com.ar/">
+<meta property="og:site_name" content="Gabusi Amoblamientos">
+<meta property="og:locale" content="es_AR">
+<meta property="og:image" content="https://gabusiamoblamientos.com.ar/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Frente del local de Gabusi Amoblamientos en Altamira 1625, Rafael Calzada">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gabusiamoblamientos.com.ar/images/og-image.jpg">
 <link rel="icon" href="images/logo-icon.png" type="image/png">
 <link rel="apple-touch-icon" href="images/logo-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -125,9 +135,13 @@
   }
   @media (max-width:860px){
     .hero .container{grid-template-columns:1fr;}
-    .hero-art{order:-1; max-width:340px; margin:0 auto 8px;}
+    .hero-art{order:-1; max-width:520px; margin:0 auto 8px;}
   }
-  .hero-art svg{width:100%; height:auto;}
+  .hero-art img{
+    width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; object-position:60% 50%;
+    border-radius:var(--radius); border:1px solid var(--line);
+    box-shadow:0 24px 40px -24px rgba(20,33,61,0.45);
+  }
   .hero h1{
     font-size:clamp(2.1rem, 4.2vw, 3.1rem); max-width:15ch; font-weight:800;
     background:linear-gradient(100deg, var(--ink) 25%, var(--pine-light) 50%, var(--ink) 75%);
@@ -148,6 +162,21 @@
   .trust-chips{display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:40px; padding-top:28px; border-top:1px solid var(--line);}
   .trust-chip{display:flex; align-items:center; gap:8px; font-size:0.88rem; color:var(--pine);}
   .trust-chip svg{width:18px; height:18px; flex-shrink:0;}
+
+
+  /* ---------- Quick actions / open badge ---------- */
+  .quick-actions{display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px; margin-top:22px;}
+  .quick-link{display:inline-flex; align-items:center; gap:6px; font-size:0.9rem; font-weight:600; color:var(--pine); text-decoration:none;}
+  .quick-link:hover{text-decoration:underline;}
+  .open-badge{display:inline-flex; align-items:center; gap:8px; font-size:0.85rem; font-weight:600; padding:6px 12px; border-radius:999px; background:var(--card); border:1px solid var(--line);}
+  .open-badge[hidden]{display:none;}
+  .open-badge .dot{width:9px; height:9px; border-radius:50%; background:#9AA3B2; flex-shrink:0;}
+  .open-badge.is-open .dot{background:var(--whatsapp-dark); box-shadow:0 0 0 3px rgba(37,211,102,0.25);}
+
+  /* ---------- Featured: show 8, expand the rest ---------- */
+  .prod-card.extra{display:none;}
+  .prod-grid.expanded .prod-card.extra{display:flex;}
+  .prod-more{display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin-top:32px;}
 
   /* ---------- Category grid ---------- */
   .section-head{max-width:52ch; margin-bottom:44px;}
@@ -298,12 +327,13 @@
   .wa-float:hover{background:var(--whatsapp-dark); transform:translateY(-3px) scale(1.06); box-shadow:0 12px 24px rgba(20,33,61,0.38);}
   .wa-float:active{transform:translateY(0) scale(0.93); box-shadow:0 4px 10px rgba(20,33,61,0.3);}
 </style>
+<noscript><style>.prod-card.extra{display:flex !important;} #prodToggle,.open-badge{display:none !important;}</style></noscript>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FurnitureStore",
   "name": "Gabusi Amoblamientos",
-  "image": "https://gabusiamoblamientos.com.ar/images/logo-icon.png",
+  "image": ["https://gabusiamoblamientos.com.ar/images/og-image.jpg","https://gabusiamoblamientos.com.ar/images/logo-icon.png"],
   "url": "https://gabusiamoblamientos.com.ar/",
   "telephone": "+5491178198915",
   "description": "Mueblería familiar con 40 años en Rafael Calzada. Colchones, sommiers, muebles de living, dormitorio, comedor, electrodomésticos y más.",
@@ -438,6 +468,17 @@
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 2c.3 2.1 1.6 3.8 3.5 4.4v3a7.6 7.6 0 0 1-3.5-1v6.4a5.9 5.9 0 1 1-5.9-5.9c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 2 2.7V2h3z"/></svg>
           </a>
         </div>
+        <div class="quick-actions">
+          <span class="open-badge" id="openBadge" hidden><span class="dot" aria-hidden="true"></span><span id="openText"></span></span>
+          <a class="quick-link" href="tel:+5491178198915">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+            Llamar
+          </a>
+          <a class="quick-link" href="https://www.google.com/maps/dir/?api=1&destination=Altamira+1625%2C+Rafael+Calzada%2C+Buenos+Aires" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Cómo llegar
+          </a>
+        </div>
         <div class="trust-chips">
           <div class="trust-chip">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>
@@ -454,291 +495,8 @@
         </div>
       </div>
 
-      <div class="hero-art" aria-hidden="true">
-        <svg viewBox="0 0 420 340" width="420" height="340" fill="none">
-          <path d="M60 260c0-70 30-100 100-100s100 30 100 100" stroke="#14213D" stroke-width="3" stroke-linecap="round"/>
-          <rect x="40" y="255" width="240" height="45" rx="10" stroke="#14213D" stroke-width="3"/>
-          <path d="M40 280H10M280 280h30" stroke="#14213D" stroke-width="3" stroke-linecap="round"/>
-          <path d="M25 300v-20M295 300v-20" stroke="#14213D" stroke-width="3" stroke-linecap="round"/>
-          <rect x="70" y="215" width="60" height="45" rx="8" stroke="#2EA8DB" stroke-width="3"/>
-          <rect x="190" y="215" width="60" height="45" rx="8" stroke="#2EA8DB" stroke-width="3"/>
-          <line x1="320" y1="60" x2="320" y2="150" stroke="#14213D" stroke-width="3" stroke-linecap="round"/>
-          <path d="M290 60a30 22 0 0 1 60 0z" stroke="#14213D" stroke-width="3"/>
-          <line x1="300" y1="150" x2="340" y2="150" stroke="#14213D" stroke-width="3" stroke-linecap="round"/>
-          <rect x="330" y="230" width="70" height="16" rx="8" stroke="#14213D" stroke-width="3"/>
-          <rect x="330" y="250" width="70" height="16" rx="8" stroke="#14213D" stroke-width="3"/>
-          <rect x="330" y="270" width="70" height="16" rx="8" stroke="#14213D" stroke-width="3"/>
-        </svg>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PRODUCT GALLERY ============ -->
-  <section id="destacados">
-    <div class="container">
-      <div class="section-head">
-        <h2>Productos destacados</h2>
-        <p>Algunos de los muebles que tenemos disponibles. Consultanos precio, stock y color por WhatsApp.</p>
-      </div>
-
-      <div class="prod-grid">
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/colchon-coral.webp" alt="Colchón Deseo Coral con sommier" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Colchón Deseo Coral</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el colchón Deseo Coral en la web y quería consultar precio, medidas y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/colchon-diamante.webp" alt="Colchón Deseo Diamante con sommier" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Colchón Deseo Diamante</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el colchón Deseo Diamante en la web y quería consultar precio, medidas y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/colchon-onix.webp" alt="Colchón Deseo Onix con sommier" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Colchón Deseo Onix</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el colchón Deseo Onix en la web y quería consultar precio, medidas y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/colchon-sueno-dorado.webp" alt="Colchón Deseo Sueño Dorado con sommier" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Colchón Deseo Sueño Dorado</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el colchón Deseo Sueño Dorado en la web y quería consultar precio, medidas y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/colchon-piero-bahia.webp" alt="Colchón Piero Bahía con sommier" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Colchón Piero Bahía</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el colchón Piero Bahía en la web y quería consultar precio, medidas y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/colchon-piero-fleur.webp" alt="Colchón Piero Fleur con sommier" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Colchón Piero Fleur</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el colchón Piero Fleur en la web y quería consultar precio, medidas y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/colchon-piero-le-rever.webp" alt="Colchón Piero Le Rêver con sommier" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Colchón Piero Le Rêver</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el colchón Piero Le Rêver en la web y quería consultar precio, medidas y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/colchon-piero-mattina.webp" alt="Colchón Piero Mattina con sommier" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Colchón Piero Mattina</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el colchón Piero Mattina en la web y quería consultar precio, medidas y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/colchon-piero-le-grand.webp" alt="Colchón Piero Le Grand con sommier" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Colchón Piero Le Grand</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el colchón Piero Le Grand en la web y quería consultar precio, medidas y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/mesa-luz-1.webp" alt="Mesa de luz con cajón y estante" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Mesa de luz con cajón</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi la mesa de luz con cajón en la web y quería consultar precio y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/ropero-1.webp" alt="Ropero de 3 puertas con espejo" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Ropero 3 puertas con espejo</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el ropero de 3 puertas con espejo en la web y quería consultar precio y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/escritorio-1.webp" alt="Escritorio con cajón y estante" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Escritorio con cajón</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el escritorio con cajón en la web y quería consultar precio y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/comoda-1.webp" alt="Cómoda Nórdik de 6 cajones" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Cómoda Nórdik 6 cajones</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi la cómoda Nórdik de 6 cajones en la web y quería consultar precio y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/mesa-luz-2.webp" alt="Mesa de luz roble y blanco" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Mesa de luz roble y blanco</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi la mesa de luz roble y blanco en la web y quería consultar precio y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/comoda-2.webp" alt="Cómoda blanca y roble 6 cajones" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Cómoda blanca y roble 6 cajones</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi la cómoda blanca y roble en la web y quería consultar precio y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/comoda-3.webp" alt="Cómoda Lumo 6 cajones" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Cómoda Lumo</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi la cómoda Lumo en la web y quería consultar precio y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/mesa-luz-3.webp" alt="Mesa de luz Lumo" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Mesa de luz Lumo</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi la mesa de luz Lumo en la web y quería consultar precio y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/escritorio-2.webp" alt="Escritorio Skog" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Escritorio Skog</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el escritorio Skog en la web y quería consultar precio y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/ropero-platinum-2-puertas.jpg" alt="Ropero Platinum 2 puertas" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Ropero Platinum 2 puertas</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el ropero Platinum de 2 puertas en la web y quería consultar precio y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/ropero-platinum-3-puertas.jpg" alt="Ropero Platinum 3 puertas" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Ropero Platinum 3 puertas</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el ropero Platinum de 3 puertas en la web y quería consultar precio y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/ropero-platinum-4-puertas.jpg" alt="Ropero Platinum 4 puertas" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Ropero Platinum 4 puertas</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el ropero Platinum de 4 puertas en la web y quería consultar precio y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/zapatero-platinum.jpg" alt="Zapatero Platinum" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Zapatero Platinum</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el zapatero Platinum en la web y quería consultar precio y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/placard-corredizo-2-puertas.jpg" alt="Placard corredizo 2 puertas con cajones" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Placard corredizo 2 puertas</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el placard corredizo de 2 puertas en la web y quería consultar precio y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/placard-amplitud-noce-mumbai.jpg" alt="Placard corredizo Noce Mumbai" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Placard corredizo Noce Mumbai</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el placard corredizo Noce Mumbai en la web y quería consultar precio y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/placard-iluminate-200-espejo.jpg" alt="Placard Iluminate con espejo" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Placard Iluminate con espejo</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el placard Iluminate con espejo en la web y quería consultar precio y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/placard-espejo-gris.jpg" alt="Placard corredizo con espejo, color gris" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Placard corredizo con espejo</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el placard corredizo con espejo (gris) en la web y quería consultar precio y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/poltrona-conrad.jpg" alt="Poltrona Conrad" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Poltrona Conrad</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi la poltrona Conrad en la web y quería consultar precio y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/poltrona-atenas.jpg" alt="Poltrona Atenas" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Poltrona Atenas</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi la poltrona Atenas en la web y quería consultar precio y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/sillon-cama-marrakech.jpg" alt="Sillón cama Marrakech" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Sillón cama Marrakech</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el sillón cama Marrakech en la web y quería consultar precio y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/poltrona-diva.jpg" alt="Sillón reclinable Diva" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Sillón reclinable Diva</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el sillón reclinable Diva en la web y quería consultar precio y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/banqueta-plegable.jpg" alt="Banqueta plegable multiuso" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Banqueta plegable multiuso</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi la banqueta plegable en la web y quería consultar precio y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
-        <div class="prod-card">
-          <div class="prod-photo-wrap"><img src="images/respaldo-asturias.jpg" alt="Respaldo Asturias para cama" loading="lazy"></div>
-          <div class="prod-body">
-            <h3>Respaldo Asturias</h3>
-            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el respaldo Asturias en la web y quería consultar precio y disponibilidad.">Consultar</a>
-          </div>
-        </div>
-
+      <div class="hero-art">
+        <img src="images/local-fachada.webp" width="1200" height="675" fetchpriority="high" alt="Frente del local de Gabusi Amoblamientos en Altamira 1625, Rafael Calzada">
       </div>
     </div>
   </section>
@@ -827,6 +585,280 @@
     </div>
   </section>
 
+  <!-- ============ PRODUCT GALLERY ============ -->
+  <section id="destacados">
+    <div class="container">
+      <div class="section-head">
+        <h2>Productos destacados</h2>
+        <p>Una selección de lo que tenemos en el salón. Consultanos precio, stock y color por WhatsApp.</p>
+      </div>
+
+      <div class="prod-grid" id="prodGrid">
+
+        <div class="prod-card">
+          <div class="prod-photo-wrap"><img src="images/ropero-platinum-3-puertas.webp" alt="Ropero Platinum 3 puertas" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Ropero Platinum 3 puertas</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el ropero Platinum de 3 puertas en la web y quería consultar precio y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card">
+          <div class="prod-photo-wrap"><img src="images/colchon-piero-le-grand.webp" alt="Colchón Piero Le Grand con sommier" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Colchón Piero Le Grand</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el colchón Piero Le Grand en la web y quería consultar precio, medidas y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card">
+          <div class="prod-photo-wrap"><img src="images/sillon-cama-marrakech.webp" alt="Sillón cama Marrakech" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Sillón cama Marrakech</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el sillón cama Marrakech en la web y quería consultar precio y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card">
+          <div class="prod-photo-wrap"><img src="images/comoda-1.webp" alt="Cómoda Nórdik de 6 cajones" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Cómoda Nórdik 6 cajones</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi la cómoda Nórdik de 6 cajones en la web y quería consultar precio y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card">
+          <div class="prod-photo-wrap"><img src="images/poltrona-conrad.webp" alt="Poltrona Conrad" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Poltrona Conrad</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi la poltrona Conrad en la web y quería consultar precio y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card">
+          <div class="prod-photo-wrap"><img src="images/colchon-diamante.webp" alt="Colchón Deseo Diamante con sommier" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Colchón Deseo Diamante</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el colchón Deseo Diamante en la web y quería consultar precio, medidas y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card">
+          <div class="prod-photo-wrap"><img src="images/placard-iluminate-200-espejo.webp" alt="Placard Iluminate con espejo" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Placard Iluminate con espejo</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el placard Iluminate con espejo en la web y quería consultar precio y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card">
+          <div class="prod-photo-wrap"><img src="images/escritorio-2.webp" alt="Escritorio Skog" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Escritorio Skog</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el escritorio Skog en la web y quería consultar precio y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card extra">
+          <div class="prod-photo-wrap"><img src="images/colchon-coral.webp" alt="Colchón Deseo Coral con sommier" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Colchón Deseo Coral</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el colchón Deseo Coral en la web y quería consultar precio, medidas y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card extra">
+          <div class="prod-photo-wrap"><img src="images/colchon-onix.webp" alt="Colchón Deseo Onix con sommier" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Colchón Deseo Onix</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el colchón Deseo Onix en la web y quería consultar precio, medidas y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card extra">
+          <div class="prod-photo-wrap"><img src="images/colchon-sueno-dorado.webp" alt="Colchón Deseo Sueño Dorado con sommier" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Colchón Deseo Sueño Dorado</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el colchón Deseo Sueño Dorado en la web y quería consultar precio, medidas y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card extra">
+          <div class="prod-photo-wrap"><img src="images/colchon-piero-bahia.webp" alt="Colchón Piero Bahía con sommier" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Colchón Piero Bahía</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el colchón Piero Bahía en la web y quería consultar precio, medidas y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card extra">
+          <div class="prod-photo-wrap"><img src="images/colchon-piero-fleur.webp" alt="Colchón Piero Fleur con sommier" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Colchón Piero Fleur</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el colchón Piero Fleur en la web y quería consultar precio, medidas y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card extra">
+          <div class="prod-photo-wrap"><img src="images/colchon-piero-le-rever.webp" alt="Colchón Piero Le Rêver con sommier" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Colchón Piero Le Rêver</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el colchón Piero Le Rêver en la web y quería consultar precio, medidas y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card extra">
+          <div class="prod-photo-wrap"><img src="images/colchon-piero-mattina.webp" alt="Colchón Piero Mattina con sommier" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Colchón Piero Mattina</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el colchón Piero Mattina en la web y quería consultar precio, medidas y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card extra">
+          <div class="prod-photo-wrap"><img src="images/mesa-luz-1.webp" alt="Mesa de luz con cajón y estante" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Mesa de luz con cajón</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi la mesa de luz con cajón en la web y quería consultar precio y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card extra">
+          <div class="prod-photo-wrap"><img src="images/ropero-1.webp" alt="Ropero de 3 puertas con espejo" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Ropero 3 puertas con espejo</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el ropero de 3 puertas con espejo en la web y quería consultar precio y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card extra">
+          <div class="prod-photo-wrap"><img src="images/escritorio-1.webp" alt="Escritorio con cajón y estante" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Escritorio con cajón</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el escritorio con cajón en la web y quería consultar precio y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card extra">
+          <div class="prod-photo-wrap"><img src="images/mesa-luz-2.webp" alt="Mesa de luz roble y blanco" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Mesa de luz roble y blanco</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi la mesa de luz roble y blanco en la web y quería consultar precio y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card extra">
+          <div class="prod-photo-wrap"><img src="images/comoda-2.webp" alt="Cómoda blanca y roble 6 cajones" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Cómoda blanca y roble 6 cajones</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi la cómoda blanca y roble en la web y quería consultar precio y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card extra">
+          <div class="prod-photo-wrap"><img src="images/comoda-3.webp" alt="Cómoda Lumo 6 cajones" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Cómoda Lumo</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi la cómoda Lumo en la web y quería consultar precio y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card extra">
+          <div class="prod-photo-wrap"><img src="images/mesa-luz-3.webp" alt="Mesa de luz Lumo" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Mesa de luz Lumo</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi la mesa de luz Lumo en la web y quería consultar precio y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card extra">
+          <div class="prod-photo-wrap"><img src="images/ropero-platinum-2-puertas.webp" alt="Ropero Platinum 2 puertas" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Ropero Platinum 2 puertas</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el ropero Platinum de 2 puertas en la web y quería consultar precio y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card extra">
+          <div class="prod-photo-wrap"><img src="images/ropero-platinum-4-puertas.webp" alt="Ropero Platinum 4 puertas" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Ropero Platinum 4 puertas</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el ropero Platinum de 4 puertas en la web y quería consultar precio y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card extra">
+          <div class="prod-photo-wrap"><img src="images/zapatero-platinum.webp" alt="Zapatero Platinum" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Zapatero Platinum</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el zapatero Platinum en la web y quería consultar precio y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card extra">
+          <div class="prod-photo-wrap"><img src="images/placard-corredizo-2-puertas.webp" alt="Placard corredizo 2 puertas con cajones" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Placard corredizo 2 puertas</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el placard corredizo de 2 puertas en la web y quería consultar precio y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card extra">
+          <div class="prod-photo-wrap"><img src="images/placard-amplitud-noce-mumbai.webp" alt="Placard corredizo Noce Mumbai" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Placard corredizo Noce Mumbai</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el placard corredizo Noce Mumbai en la web y quería consultar precio y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card extra">
+          <div class="prod-photo-wrap"><img src="images/placard-espejo-gris.webp" alt="Placard corredizo con espejo, color gris" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Placard corredizo con espejo</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el placard corredizo con espejo (gris) en la web y quería consultar precio y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card extra">
+          <div class="prod-photo-wrap"><img src="images/poltrona-atenas.webp" alt="Poltrona Atenas" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Poltrona Atenas</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi la poltrona Atenas en la web y quería consultar precio y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card extra">
+          <div class="prod-photo-wrap"><img src="images/poltrona-diva.webp" alt="Sillón reclinable Diva" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Sillón reclinable Diva</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el sillón reclinable Diva en la web y quería consultar precio y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card extra">
+          <div class="prod-photo-wrap"><img src="images/banqueta-plegable.webp" alt="Banqueta plegable multiuso" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Banqueta plegable multiuso</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi la banqueta plegable en la web y quería consultar precio y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+        <div class="prod-card extra">
+          <div class="prod-photo-wrap"><img src="images/respaldo-asturias.webp" alt="Respaldo Asturias para cama" loading="lazy"></div>
+          <div class="prod-body">
+            <h3>Respaldo Asturias</h3>
+            <a class="btn btn-ghost btn-sm" data-wa-msg="Hola! Vi el respaldo Asturias en la web y quería consultar precio y disponibilidad.">Consultar</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="prod-more">
+        <button type="button" class="btn btn-ghost" id="prodToggle" aria-expanded="false" aria-controls="prodGrid">Ver todos los productos</button>
+        <a class="btn btn-ghost" href="colchones.html">Ver todos los colchones</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ FINANCING & SHIPPING ============ -->
   <section id="financiacion" class="financing">
     <div class="container">
@@ -894,18 +926,18 @@
         <p>Nos vas a encontrar en Altamira 1625, Rafael Calzada. Mirá algunas fotos del salón y elegí tranquilo — o coordiná tu visita por WhatsApp.</p>
       </div>
       <div class="local-gallery">
-        <a href="images/local-fachada.jpg" target="_blank" rel="noopener"><img src="images/local-fachada.jpg" alt="Frente del local de Gabusi Amoblamientos en Altamira 1625" loading="lazy"></a>
-        <a href="images/local-interior-1.jpg" target="_blank" rel="noopener"><img src="images/local-interior-1.jpg" alt="Salón de exhibición de Gabusi Amoblamientos" loading="lazy"></a>
-        <a href="images/local-interior-2.jpg" target="_blank" rel="noopener"><img src="images/local-interior-2.jpg" alt="Muebles de living y comedor exhibidos en el local" loading="lazy"></a>
-        <a href="images/local-interior-3.jpg" target="_blank" rel="noopener"><img src="images/local-interior-3.jpg" alt="Sector de roperos y placares en el local" loading="lazy"></a>
-        <a href="images/local-interior-4.jpg" target="_blank" rel="noopener"><img src="images/local-interior-4.jpg" alt="Sillones y muebles exhibidos en el local" loading="lazy"></a>
-        <a href="images/local-interior-5.jpg" target="_blank" rel="noopener"><img src="images/local-interior-5.jpg" alt="Muebles y electrodomésticos exhibidos en el local" loading="lazy"></a>
-        <a href="images/local-interior-6.jpg" target="_blank" rel="noopener"><img src="images/local-interior-6.jpg" alt="Sector de dormitorio exhibido en el local" loading="lazy"></a>
-        <a href="images/local-interior-7.jpg" target="_blank" rel="noopener"><img src="images/local-interior-7.jpg" alt="Muebles exhibidos en el salón de Gabusi Amoblamientos" loading="lazy"></a>
-        <a href="images/local-interior-8.jpg" target="_blank" rel="noopener"><img src="images/local-interior-8.jpg" alt="Living y comedor exhibidos en el local" loading="lazy"></a>
-        <a href="images/local-interior-9.jpg" target="_blank" rel="noopener"><img src="images/local-interior-9.jpg" alt="Sector de sillones y living del local" loading="lazy"></a>
-        <a href="images/local-interior-10.jpg" target="_blank" rel="noopener"><img src="images/local-interior-10.jpg" alt="Sector de dormitorio y placares del local" loading="lazy"></a>
-        <a href="images/local-interior-11.jpg" target="_blank" rel="noopener"><img src="images/local-interior-11.jpg" alt="Vista general del salón de Gabusi Amoblamientos" loading="lazy"></a>
+        <a href="images/local-fachada.webp" target="_blank" rel="noopener"><img src="images/local-fachada.webp" alt="Frente del local de Gabusi Amoblamientos en Altamira 1625" loading="lazy"></a>
+        <a href="images/local-interior-1.webp" target="_blank" rel="noopener"><img src="images/local-interior-1.webp" alt="Salón de exhibición de Gabusi Amoblamientos" loading="lazy"></a>
+        <a href="images/local-interior-2.webp" target="_blank" rel="noopener"><img src="images/local-interior-2.webp" alt="Muebles de living y comedor exhibidos en el local" loading="lazy"></a>
+        <a href="images/local-interior-3.webp" target="_blank" rel="noopener"><img src="images/local-interior-3.webp" alt="Sector de roperos y placares en el local" loading="lazy"></a>
+        <a href="images/local-interior-4.webp" target="_blank" rel="noopener"><img src="images/local-interior-4.webp" alt="Sillones y muebles exhibidos en el local" loading="lazy"></a>
+        <a href="images/local-interior-5.webp" target="_blank" rel="noopener"><img src="images/local-interior-5.webp" alt="Muebles y electrodomésticos exhibidos en el local" loading="lazy"></a>
+        <a href="images/local-interior-6.webp" target="_blank" rel="noopener"><img src="images/local-interior-6.webp" alt="Sector de dormitorio exhibido en el local" loading="lazy"></a>
+        <a href="images/local-interior-7.webp" target="_blank" rel="noopener"><img src="images/local-interior-7.webp" alt="Muebles exhibidos en el salón de Gabusi Amoblamientos" loading="lazy"></a>
+        <a href="images/local-interior-8.webp" target="_blank" rel="noopener"><img src="images/local-interior-8.webp" alt="Living y comedor exhibidos en el local" loading="lazy"></a>
+        <a href="images/local-interior-9.webp" target="_blank" rel="noopener"><img src="images/local-interior-9.webp" alt="Sector de sillones y living del local" loading="lazy"></a>
+        <a href="images/local-interior-10.webp" target="_blank" rel="noopener"><img src="images/local-interior-10.webp" alt="Sector de dormitorio y placares del local" loading="lazy"></a>
+        <a href="images/local-interior-11.webp" target="_blank" rel="noopener"><img src="images/local-interior-11.webp" alt="Vista general del salón de Gabusi Amoblamientos" loading="lazy"></a>
       </div>
     </div>
   </section>
@@ -947,6 +979,7 @@
         <p>Altamira 1625, Rafael Calzada</p>
         <p>Horario: Lunes a viernes de 9 a 13 y de 15.30 a 19.30. Sábados de 9 a 13 y de 17 a 19.</p>
         <p><a data-wa-msg="Hola! Vi la web de Gabusi Amoblamientos y quería hacer una consulta.">WhatsApp: +54 9 11 7819-8915</a></p>
+        <p><a href="tel:+5491178198915">Llamar</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=Altamira+1625%2C+Rafael+Calzada%2C+Buenos+Aires" target="_blank" rel="noopener">Cómo llegar</a></p>
         <p>Coordiná tu visita por WhatsApp para asegurarte que te podamos atender bien.</p>
         <a class="btn btn-wa btn-sm" style="margin-top:10px;" data-wa-msg="Hola! Vi la web de Gabusi Amoblamientos y quería hacer una consulta.">
           <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.33 4.97L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2zm5.8 14.13c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.12.11-1.81-.11-.42-.13-.95-.31-1.64-.6-2.9-1.25-4.79-4.17-4.93-4.36-.14-.19-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.27-.29.58-.36.78-.36.19 0 .39 0 .55.01.18.01.42-.07.65.5.24.58.81 2.01.88 2.16.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.16-.19.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.53.72 1.79.85.26.13.43.19.5.3.07.11.07.62-.17 1.3z"/></svg>
@@ -969,8 +1002,7 @@
       </div>
     </div>
     <div class="legal">
-      <span><span class="brand-font">Gabusi Amoblamientos</span> — Mazzaro Gustavo Guillermo (CUIT 20-17549115-6)</span>
-      <span>Rafael Calzada, Buenos Aires</span>
+      <span><span class="brand-font">Gabusi Amoblamientos</span> - Rafael Calzada, Buenos Aires</span>
     </div>
   </div>
 </footer>
@@ -987,6 +1019,57 @@
     el.setAttribute('target', '_blank');
     el.setAttribute('rel', 'noopener');
   });
+
+  // Ver todos / ver menos en productos destacados
+  (function(){
+    var btn = document.getElementById('prodToggle');
+    var grid = document.getElementById('prodGrid');
+    if(!btn || !grid) return;
+    btn.addEventListener('click', function(){
+      var open = grid.classList.toggle('expanded');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.textContent = open ? 'Ver menos' : 'Ver todos los productos';
+      if(!open){ document.getElementById('destacados').scrollIntoView({behavior:'smooth'}); }
+    });
+  })();
+
+  // "Abierto ahora" según horario de Argentina
+  (function(){
+    var badge = document.getElementById('openBadge');
+    var text = document.getElementById('openText');
+    if(!badge || !text) return;
+    // minutos desde 00:00; 0 = domingo
+    var H = {
+      1:[[540,780],[930,1170]], 2:[[540,780],[930,1170]], 3:[[540,780],[930,1170]],
+      4:[[540,780],[930,1170]], 5:[[540,780],[930,1170]], 6:[[540,780],[1020,1140]], 0:[]
+    };
+    var days = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+    function fmt(m){ var h=Math.floor(m/60), mm=m%60; return h+(mm?':'+(mm<10?'0':'')+mm:':00')+' hs'; }
+    try{
+      var parts = new Intl.DateTimeFormat('en-US',{timeZone:'America/Argentina/Buenos_Aires',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
+      var get = function(t){ return parts.filter(function(p){return p.type===t;})[0].value; };
+      var dow = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[get('weekday')];
+      var now = (parseInt(get('hour'),10)%24)*60 + parseInt(get('minute'),10);
+      var slots = H[dow], open = null, next = null;
+      for(var i=0;i<slots.length;i++){
+        if(now>=slots[i][0] && now<slots[i][1]){ open = slots[i]; break; }
+        if(now<slots[i][0] && !next){ next = {d:0, m:slots[i][0]}; }
+      }
+      if(open){
+        badge.classList.add('is-open');
+        text.textContent = 'Abierto ahora · cerramos a las ' + fmt(open[1]);
+      }else{
+        if(!next){
+          for(var k=1;k<=7 && !next;k++){
+            var nd = (dow+k)%7;
+            if(H[nd].length){ next = {d:k, nd:nd, m:H[nd][0][0]}; }
+          }
+        }
+        text.textContent = 'Cerrado · abrimos ' + (next.d===0 ? 'hoy' : (next.d===1 ? 'mañana' : 'el '+days[next.nd])) + ' a las ' + fmt(next.m);
+      }
+      badge.hidden = false;
+    }catch(e){ /* sin soporte de Intl: no se muestra el cartel */ }
+  })();
 </script>
 
 </body>
