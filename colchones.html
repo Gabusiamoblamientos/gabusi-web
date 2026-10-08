@@ -720,5 +720,27 @@ document.querySelectorAll('[data-wa-msg]').forEach(function(el){
   el.setAttribute('rel', 'noopener');
 });
 </script>
+<script>
+  // Medición GA4: clics a WhatsApp y llamadas
+  document.addEventListener('click', function (e) {
+    if (typeof gtag !== 'function' || !e.target.closest) return;
+    var wa = e.target.closest('a[href*="wa.me"]');
+    if (wa) {
+      gtag('event', 'click_whatsapp', {
+        link_text: (wa.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 60),
+        link_url: wa.href
+      });
+      return;
+    }
+    var tel = e.target.closest('a[href^="tel:"]');
+    if (tel) {
+      gtag('event', 'click_llamar', {
+        link_text: (tel.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 60),
+        link_url: tel.href
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
