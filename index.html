@@ -334,6 +334,41 @@
   .wa-float svg{width:28px; height:28px; color:#0B2E1B;}
   .wa-float:hover{background:var(--whatsapp-dark); transform:translateY(-3px) scale(1.06); box-shadow:0 12px 24px rgba(20,33,61,0.38);}
   .wa-float:active{transform:translateY(0) scale(0.93); box-shadow:0 4px 10px rgba(20,33,61,0.3);}
+
+/* ---------- Menú: desplegable de categorías + Outlet ---------- */
+nav a.active{opacity:1; color:var(--pine-light);}
+.nav-dd{position:relative; display:flex; align-items:center; gap:2px;}
+.nav-dd-toggle{
+  background:none; border:0; color:#FFFFFF; opacity:0.82; cursor:pointer;
+  padding:6px 4px; display:flex; align-items:center; border-radius:6px;
+}
+.nav-dd-toggle svg{transition:transform 0.2s ease;}
+.nav-dd-toggle:hover{opacity:1; color:var(--pine-light);}
+.nav-dd.open .nav-dd-toggle svg{transform:rotate(180deg);}
+.nav-dd-menu{
+  display:none; position:absolute; top:100%; left:-14px; margin-top:12px; min-width:220px;
+  background:var(--ink); border:1px solid rgba(255,255,255,0.14); border-radius:12px;
+  padding:8px; box-shadow:0 18px 32px -14px rgba(0,0,0,0.5); z-index:60;
+}
+.nav-dd-menu::before{content:""; position:absolute; left:0; right:0; top:-14px; height:14px;}
+.nav-dd-menu a{display:block; padding:10px 12px; border-radius:8px; font-size:0.9rem;}
+.nav-dd-menu a:hover{background:rgba(255,255,255,0.08);}
+.nav-dd.open .nav-dd-menu{display:block;}
+@media (hover:hover){
+  .nav-dd:hover .nav-dd-menu{display:block;}
+  .nav-dd:hover .nav-dd-toggle svg{transform:rotate(180deg);}
+}
+nav a.nav-outlet{color:#FFD27A; opacity:1; font-weight:700;}
+nav a.nav-outlet:hover, nav a.nav-outlet.active{color:var(--pine-light);}
+
+/* ---------- Banner Outlet ---------- */
+.outlet-band{padding:0; background:var(--ink); color:#FFFFFF;}
+.outlet-band .container{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px 28px; padding-top:22px; padding-bottom:22px;}
+.outlet-band h2{font-size:1.25rem; font-weight:800; color:#FFFFFF;}
+.outlet-band h2 span{color:#FFD27A;}
+.outlet-band p{margin:6px 0 0; font-size:0.92rem; color:rgba(245,247,250,0.8); max-width:60ch;}
+.outlet-band .btn{background:#FFD27A; color:var(--ink); border-color:#FFD27A;}
+.outlet-band .btn:hover{background:#FFFFFF; transform:translateY(-2px);}
 </style>
 <noscript><style>.prod-card.extra{display:flex !important;} #prodToggle,.open-badge{display:none !important;}</style></noscript>
 <script type="application/ld+json">
@@ -436,11 +471,17 @@
       <span class="word">Gabusi</span><span class="sub">AMOBLAMIENTOS</span>
     </a>
     <nav>
-      <a href="#categorias">Categorías</a>
-      <a href="colchones.html">Colchones</a>
-      <a href="sommiers.html">Sommiers</a>
-      <a href="placares-y-roperos.html">Placares</a>
-      <a href="sillones-y-livings.html">Sillones</a>
+      <div class="nav-dd">
+        <a href="#categorias" class="nav-dd-link">Categorías</a>
+        <button type="button" class="nav-dd-toggle" aria-label="Ver categorías" aria-expanded="false" aria-controls="navCategorias"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="nav-dd-menu" id="navCategorias">
+          <a href="colchones.html">Colchones</a>
+          <a href="sommiers.html">Sommiers y conjuntos</a>
+          <a href="placares-y-roperos.html">Placares y roperos</a>
+          <a href="sillones-y-livings.html">Sillones y livings</a>
+        </div>
+      </div>
+      <a href="outlet.html" class="nav-outlet">Outlet</a>
       <a href="#destacados">Destacados</a>
       <a href="#financiacion">Financiación</a>
       <a href="#nosotros">Nosotros</a>
@@ -517,6 +558,17 @@
       <div class="hero-art">
         <img src="images/local-fachada.webp" width="1200" height="675" fetchpriority="high" alt="Frente del local de Gabusi Amoblamientos en Altamira 1625, Rafael Calzada">
       </div>
+    </div>
+  </section>
+
+  <!-- ============ OUTLET ============ -->
+  <section class="outlet-band" aria-label="Outlet">
+    <div class="container">
+      <div>
+        <h2><span>Outlet</span> Gabusi</h2>
+        <p>Estamos limpiando el depósito: muebles y productos a precio especial, hasta agotar stock.</p>
+      </div>
+      <a class="btn btn-sm" href="outlet.html">Ver el outlet</a>
     </div>
   </section>
 
@@ -1112,6 +1164,20 @@
       });
     }
   });
+</script>
+
+<script>
+  // Menú: desplegable de categorías
+  (function () {
+    var dd = document.querySelector('.nav-dd');
+    if (!dd) return;
+    var btn = dd.querySelector('.nav-dd-toggle');
+    function setOpen(o) { dd.classList.toggle('open', o); btn.setAttribute('aria-expanded', o ? 'true' : 'false'); }
+    btn.addEventListener('click', function (e) { e.stopPropagation(); setOpen(!dd.classList.contains('open')); });
+    document.addEventListener('click', function (e) { if (!dd.contains(e.target)) setOpen(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+    dd.addEventListener('focusout', function (e) { if (e.relatedTarget && !dd.contains(e.relatedTarget)) setOpen(false); });
+  })();
 </script>
 
 </body>
