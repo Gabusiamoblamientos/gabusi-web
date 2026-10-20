@@ -34,5 +34,42 @@
   },
 */
 window.OUTLET_ITEMS = [
-
+  {
+    nombre: "Juego de 6 sillas de roble",
+    categoria: "Comedor",
+    foto: "images/outlet/sillas-roble.webp",
+    precioOutlet: 290000,
+    condicion: "Nuevas, 2da selección",
+    detalle: "Juego de 6 sillas de roble con asiento tapizado."
+  },
+  {
+    nombre: "Juego de 6 sillas cromadas",
+    categoria: "Comedor",
+    foto: "images/outlet/sillas-cromadas.webp",
+    precioOutlet: 290000,
+    condicion: "Nuevas, 2da selección",
+    detalle: "Juego de 6 sillas cromadas con asiento tapizado."
+  },
+  {
+    nombre: "Juego de 6 sillas con patas de madera",
+    categoria: "Comedor",
+    foto: "images/outlet/sillas-patas-madera-cuerina.webp",
+    precioOutlet: 190000,
+    condicion: "Nuevas, 2da selección",
+    detalle: "Patas de madera, tapizado de cuerina."
+  },
+  {
+    nombre: "Mecedora Guatambú",
+    categoria: "Living",
+    foto: "images/outlet/mecedora-guatambu.webp",
+    precioOutlet: 390000,
+    condicion: "Nueva, 2da selección"
+  },
+  {
+    nombre: "Sillón esquinero 3 cuerpos",
+    categoria: "Living",
+    foto: "images/outlet/sillon-esquinero-3-cuerpos.webp",
+    precioOutlet: 150000,
+    condicion: "Nuevo, 2da selección"
+  }
 ];
