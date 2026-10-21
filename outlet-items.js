@@ -38,25 +38,25 @@ window.OUTLET_ITEMS = [
     nombre: "Juego de 6 sillas de roble",
     categoria: "Comedor",
     foto: "images/outlet/sillas-roble.webp",
-    precioOutlet: 290000,
+    precioOutlet: 49000,
     condicion: "Nuevas, 2da selección",
-    detalle: "Juego de 6 sillas de roble con asiento tapizado."
+    detalle: "Juego de 6 sillas de roble con asiento tapizado. Precio por unidad ($49.000 c/u)."
   },
   {
     nombre: "Juego de 6 sillas cromadas",
     categoria: "Comedor",
     foto: "images/outlet/sillas-cromadas.webp",
-    precioOutlet: 290000,
+    precioOutlet: 49000,
     condicion: "Nuevas, 2da selección",
-    detalle: "Juego de 6 sillas cromadas con asiento tapizado."
+    detalle: "Juego de 6 sillas cromadas con asiento tapizado. Precio por unidad ($49.000 c/u)."
   },
   {
     nombre: "Juego de 6 sillas con patas de madera",
     categoria: "Comedor",
     foto: "images/outlet/sillas-patas-madera-cuerina.webp",
-    precioOutlet: 190000,
+    precioOutlet: 31500,
     condicion: "Nuevas, 2da selección",
-    detalle: "Patas de madera, tapizado de cuerina."
+    detalle: "Juego de 6 sillas. Patas de madera, tapizado de cuerina. Precio por unidad ($31.500 c/u)."
   },
   {
     nombre: "Mecedora Guatambú",
