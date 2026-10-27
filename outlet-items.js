@@ -64,12 +64,5 @@ window.OUTLET_ITEMS = [
     foto: "images/outlet/mecedora-guatambu.webp",
     precioOutlet: 390000,
     condicion: "Nueva, 2da selección"
-  },
-  {
-    nombre: "Sillón esquinero 3 cuerpos",
-    categoria: "Living",
-    foto: "images/outlet/sillon-esquinero-3-cuerpos.webp",
-    precioOutlet: 150000,
-    condicion: "Nuevo, 2da selección"
   }
 ];
